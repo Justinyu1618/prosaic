@@ -1,18 +1,31 @@
+
 #projects {
-  .card {
-    border-radius: $rounded-borders;
-    text-decoration: none !important;
-    margin: 10px auto;
+  text-align: center;
+  margin-top: 30px;
+  #projects-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    .card-img-top {
-      border-radius: $rounded-borders $rounded-borders 0 0;
-    }
+    .card {
+      border-radius: $rounded-borders;
+      text-decoration: none !important;
+      margin: 10px;
+      width: 20rem;
+      a {
+        text-decoration: none;
+      }
 
-    transition: transform 400ms;
+      .card-img-top {
+        border-radius: $rounded-borders $rounded-borders 0 0;
+      }
 
-    &:hover:not(.post) {
-      transform: translateY(-8px);
-      box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+      transition: transform 400ms;
+
+      &:hover:not(.post) {
+        transform: translateY(-8px);
+        box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+      }
     }
   }
 }
