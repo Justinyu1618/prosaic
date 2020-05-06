@@ -6,19 +6,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    .modal-dialog {
+      max-width: 800px;
+    }
     .card {
       border-radius: $rounded-borders;
       text-decoration: none !important;
       margin: 10px;
       width: 20rem;
-      a {
-        text-decoration: none;
-      }
-
-      .card-img-top {
-        border-radius: $rounded-borders $rounded-borders 0 0;
-      }
 
       transition: transform 400ms;
 
@@ -26,6 +21,47 @@
         transform: translateY(-8px);
         box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
       }
+
+
+      a {
+        text-decoration: none;
+      }
+
+      .card-img-top {
+        border-radius: $rounded-borders $rounded-borders 0 0;
+      }
+      .card-badges-wrap{
+        height: 50px;
+        .card-badges {
+          display: flex;
+          justify-content: flex-end;
+          margin: 20px 50px;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+
+          .badge {
+            border: 1px solid !important;
+            &:hover {
+              color: #235789;
+              border-color: #235789 !important;
+              border: 2px solid !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .project-img {
+    max-width: 70%;
+  }
+
+  .project-content {
+    font-size:100%;
+
+    h1, h2, h3, h4, h5 {
+      // font-size: 100%;
     }
   }
 }

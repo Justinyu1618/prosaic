@@ -15,6 +15,11 @@ a:hover {
     text-decoration: underline;
 }
 
+p {
+    a {
+        color: $highlight !important;
+    }
+}
 
 #main {
     width: 60%;

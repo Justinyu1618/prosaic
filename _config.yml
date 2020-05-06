@@ -21,3 +21,6 @@ exclude:
   - Gemfile.lock
   - vendor/bundle
 excerpt_separator: <!--more-->
+
+collections:
+  - projects
