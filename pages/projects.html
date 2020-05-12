@@ -18,9 +18,24 @@ permalink: /projects/
           </div>
         </a>
         <div class="card-badges-wrap">
-        <div class="card-badges">
-          <div class="badge badge-pill border border-dark"> <i class="fab fa-github" href="https://www.github.com"></i> Github</div>
-          </div>
+          {% if project.demo %}
+            <div class="card-badges">
+              <a href="{{project.demo}}" target="_blank">
+                <div class="badge badge-pill border "> 
+                  <i class="fa fa-eye"></i> <span>Demo</span>
+                </div>
+              </a>
+            </div>
+          {% endif %}
+          {% if project.github %}
+            <div class="card-badges">
+              <a href="{{project.github}}" target="_blank">
+                <div class="badge badge-pill border "> 
+                  <i class="fab fa-github"></i> <span>Github</span>
+                </div>
+              </a>
+            </div>
+          {% endif %}
         </div>
       </div>  
       <div class="modal fade" id="{{project.key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">

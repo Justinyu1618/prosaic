@@ -3,8 +3,8 @@ title: HackMIT Appreader
 description: Personal Project
 cover: /assets/images/portfolio/appreader1.png
 key: appreader
-github:
-demo: 
+github: https://www.github.com
+demo: https://www.google.com
 ---
 ### Motivation
 HackMIT receives several thousand applications every year. As an organizer of HackMIT, I wanted to create a platform that would streamline the application reading process, automatically record and manage the scoring of these apps, and track the progress of indivduals throughout the app reading process
