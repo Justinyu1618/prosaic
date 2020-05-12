@@ -3,7 +3,7 @@ layout: default
 permalink: /
 ---
 
-<img class="propic" src="/assets/images/profile.jpg">
+<img class="propic" src="{{site.url}}{{site.baseurl}}/assets/images/profile.jpg">
 
 Hey! I'm a student at MIT '22 studying Electrical Engineering, Computer Science and Linguistics.
 
