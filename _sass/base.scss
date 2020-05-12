@@ -104,6 +104,22 @@ p {
     margin-bottom:10px;
     padding-bottom:10px;
     border-top: 1px solid #000;
+
+    .icons-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+
+        .icon_link {
+            font-size: 3em;
+            margin: 0px 15px;
+            color: $grey;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
 }
 
 #logo   {
@@ -159,8 +175,17 @@ p {
 }
 
 
+@media screen and (max-width: $screen-lg-min){
+    #title-text {
+        font-size: 2rem;
+    }
 
-@media screen and (max-width: 850px) {
+    #nav .nav-link {
+        margin: 0px !important;
+    }
+}
+
+@media screen and (max-width: $screen-md-min) {
     #main {
         width: auto;
         margin: 0 auto;
@@ -172,17 +197,21 @@ p {
         width: 100%;
     }
 
-    #logo img {
-        max-width: 80%;
+    #title-text {
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     #nav {
-        font-size: 2em;
-        padding-bottom: 0.5em;
+        // font-size: 1.5em;
+        #nav-btns-wrap{
+            justify-content: center;
+        }
+        
     }
 
     h2 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     h3 {

@@ -31,21 +31,33 @@
         border-radius: $rounded-borders $rounded-borders 0 0;
       }
       .card-badges-wrap{
-        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px 15px;
+        flex-wrap: wrap;
+
         .card-badges {
-          display: flex;
-          justify-content: flex-end;
-          margin: 20px 50px;
-          position: absolute;
-          bottom: 0px;
-          right: 0px;
+          margin: 5px 5px 15px 0px;
+          
 
           .badge {
-            border: 1px solid !important;
+            display: flex ;
+            border: 1px solid $grey !important;
+            color: $grey;
+            
+            i {
+              font-size: 1.5em;
+              margin-right: 5px;
+            }
+            span {
+              vertical-align: middle;
+              line-height: 18px
+            }
+
             &:hover {
-              color: #235789;
-              border-color: #235789 !important;
-              border: 2px solid !important;
+              color: black;
+              border-color: black !important;
+              border: 1.5px solid !important;
             }
           }
         }
