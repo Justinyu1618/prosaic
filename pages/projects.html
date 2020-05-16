@@ -7,9 +7,10 @@ permalink: /projects/
   <h2>Projects</h2>
   <p>Here are some projects I'm currently working on or have worked on in the past!</p>
   <div id="projects-wrap">
-    {% for project in site.projects %}
+    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    {% for project in sorted_projects %}
       <div class="card" >
-
+        
         <a href="" data-toggle="modal" data-target="#{{project.key}}">
           <img src="{{site.url}}{{site.baseurl}}{{project.cover}}" class="card-img-top" alt="...">
           <div class="card-body">
