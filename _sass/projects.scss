@@ -14,6 +14,7 @@
       text-decoration: none !important;
       margin: 10px;
       width: 20rem;
+      justify-content: space-between;
 
       transition: transform 400ms;
 
@@ -29,6 +30,9 @@
 
       .card-img-top {
         border-radius: $rounded-borders $rounded-borders 0 0;
+        width: auto;
+        max-height: 200px;
+        max-width: 100%
       }
       .card-badges-wrap{
         display: flex;
@@ -67,11 +71,12 @@
 
   .project-img {
     max-width: 70%;
+    margin: 30px auto;
   }
 
   .project-content {
     font-size:100%;
-
+    padding: 20px;
     h1, h2, h3, h4, h5 {
       // font-size: 100%;
     }

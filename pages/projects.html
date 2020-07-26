@@ -37,6 +37,24 @@ permalink: /projects/
               </a>
             </div>
           {% endif %}
+          {% if project.video %}
+            <div class="card-badges">
+              <a href="{{project.video}}" target="_blank">
+                <div class="badge badge-pill border "> 
+                  <i class="fa fa-video-camera"></i> <span>Video</span>
+                </div>
+              </a>
+            </div>
+          {% endif %}
+          {% if project.website %}
+            <div class="card-badges">
+              <a href="{{project.video}}" target="_blank">
+                <div class="badge badge-pill border "> 
+                  <i class="fa fa-eye"></i> <span>Website</span>
+                </div>
+              </a>
+            </div>
+          {% endif %}
         </div>
       </div>  
       <div class="modal fade" id="{{project.key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
