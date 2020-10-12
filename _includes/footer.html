@@ -1,0 +1,13 @@
+<div id="footer">
+  <div class="icons-wrap">
+  {% for item in site.data.social_links %}
+    <a href="{{ item.url }}" target="_blank"><i class="{{item.icon}} icon_link"></i></a>
+  {% endfor %}
+  </div>
+  <p>
+    2020   ·
+    {{site.owner}}  ·
+    <a href="mailto:justinyu@mit.edu">Contact</a> 
+  </p>
+  
+</div>

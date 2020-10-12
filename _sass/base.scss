@@ -1,0 +1,252 @@
+body    {
+    margin-top: 0px;
+    padding:0;
+    font-family: 'Montserrat','Cutive Mono', serif;
+    font-size:100%;
+    line-height:150%;
+}
+
+a:link, a:visited   {
+    text-decoration: none;
+    color:#000
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    a {
+        color: $highlight !important;
+    }
+}
+
+#main {
+    width: 60%;
+    margin: 0 auto;
+
+    .propic {
+        width: 275px;
+        height: 275px;
+        float: left;
+        margin: 20px 40px 20px 20px;
+        border-radius: 100%;
+    }
+}
+
+#main-wide {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+#nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: right;
+    margin:auto;
+    margin-top:0px;
+    padding-top:0px;
+    margin-bottom:5px;
+    padding-bottom:5px;
+    border-bottom: 1px solid #000;
+    
+    a {
+        text-decoration: none;
+    }
+
+    #nav-btns-wrap {
+        display: flex;
+    }
+
+    .link-after {
+      content: "";
+      display: flex;
+      height: 0.15em;
+      background: black;
+    }
+
+    .nav-link {
+        margin: 0px 10px;
+        &::after {
+            @extend .link-after;
+            width: 0;
+            transition: width 0.35s;
+        }
+        &:hover::after {
+            width: 100%;
+         }
+    }
+}
+
+#content-left {
+    text-align:left;
+    margin:auto;
+    padding-top:5px;
+    margin-bottom:20px;
+    padding-bottom:20px;
+}
+
+#content {
+    text-align:center;
+    margin:auto;
+    margin-top:20px;
+    padding-top:20px;
+    margin-bottom:20px;
+    padding-bottom:20px;
+}
+
+#footer {
+    text-align:center;
+    margin:auto;
+    font-size:0.8em;
+    margin-bottom:10px;
+    padding-bottom:10px;
+    border-top: 1px solid #000;
+
+    .icons-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+
+        .icon_link {
+            font-size: 3em;
+            margin: 0px 15px;
+            color: $grey;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+#logo   {
+    text-align:center;
+    margin: 20px auto 20px auto;
+}
+
+#logo img {
+    max-width: 50%;
+}
+
+#content-left a:link, #content-left a:visited   {
+    text-decoration: underline;
+    color:#000
+}
+
+#content-left a:hover   {
+    text-decoration: none;
+}
+
+#post-short a:link, #post-short a:visited   {
+    text-decoration: none;
+    color:#000
+}
+
+#post-short a:hover {
+    text-decoration: underline;
+}
+
+#post-short h3, #post h2    {
+    margin-bottom: 0px;
+}
+
+#post-short i   {
+    font-size:0.8em;
+    color: grey;
+}
+
+#post i {
+    font-size:0.9em;
+    color: grey;
+}
+
+#categories a, #categories a:link, #categories a:visited {
+    background-color: grey;
+    text-decoration: none;
+    padding: 0.1em 0.5em 0.1em 0.5em;
+    border-radius: 25px;
+}
+
+#categories a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: $screen-lg-min){
+    #title-text {
+        font-size: 2rem;
+    }
+
+    #nav .nav-link {
+        margin: 0px !important;
+    }
+}
+
+@media screen and (max-width: $screen-md-min) {
+    #main {
+        width: auto;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #logo, #nav, #content-left, #footer {
+        display: block;
+        width: 100%;
+    }
+
+    #title-text {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #nav {
+        // font-size: 1.5em;
+        #nav-btns-wrap{
+            justify-content: center;
+        }
+        
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    #main {
+        width: auto;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #logo, #nav, #content-left, #footer {
+        display: block;
+        width: 100%;
+    }
+
+    #logo img {
+        max-width: 80%;
+    }
+
+    #nav {
+        font-size: 1.1em;
+        padding-bottom: 0.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+}

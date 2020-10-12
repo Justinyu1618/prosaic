@@ -1,0 +1,12 @@
+- name: demo
+  displayname: Demo
+  icon: fa fa-eye
+- name: website
+  displayname: Website
+  icon: fa fa-globe
+- name: github
+  displayname: Github
+  icon: fab fa-github
+- name: video
+  displayname: Video
+  icon: fa fa-video-camera

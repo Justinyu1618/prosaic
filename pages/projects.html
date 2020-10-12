@@ -1,0 +1,64 @@
+---
+layout: wider
+title: Projects
+permalink: /projects/
+---
+<div id="projects">
+  <h2>Projects</h2>
+  <p>Here are some projects I'm currently working on or have worked on in the past!</p>
+  <div id="projects-wrap">
+    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    {% for project in sorted_projects %}
+      <div class="card" >
+        <a href="" data-toggle="modal" data-target="#{{project.key}}">
+          <img src="{{site.url}}{{site.baseurl}}{{project.cover}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <p class="card-text">{{project.description}}</p>
+          </div>
+        </a>
+        <div class="card-badges-wrap">
+          {% for badge in site.data.project_badges %}
+            {% if project[badge.name] %}
+              <div class="card-badges">
+                <a href="{{project[badge.name]}}" target="_blank">
+                  <div class="badge badge-pill border "> 
+                    <i class="{{badge.icon}}"></i> <span>{{badge.displayname}}</span>
+                  </div>
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>  
+      <div class="modal fade" id="{{project.key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="exampleModalLongTitle">{{project.title}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-badges-wrap">
+              {% for badge in site.data.project_badges %}
+                {% if project[badge.name] %}
+                  <div class="card-badges">
+                    <a href="{{project[badge.name]}}" target="_blank">
+                      <div class="badge badge-pill border "> 
+                        <i class="{{badge.icon}}"></i> <span>{{badge.displayname}}</span>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="modal-body project-content">
+              {{project.content}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
