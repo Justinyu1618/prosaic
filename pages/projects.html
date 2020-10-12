@@ -10,7 +10,6 @@ permalink: /projects/
     {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
     {% for project in sorted_projects %}
       <div class="card" >
-        
         <a href="" data-toggle="modal" data-target="#{{project.key}}">
           <img src="{{site.url}}{{site.baseurl}}{{project.cover}}" class="card-img-top" alt="...">
           <div class="card-body">
@@ -19,42 +18,17 @@ permalink: /projects/
           </div>
         </a>
         <div class="card-badges-wrap">
-          {% if project.demo %}
-            <div class="card-badges">
-              <a href="{{project.demo}}" target="_blank">
-                <div class="badge badge-pill border "> 
-                  <i class="fa fa-eye"></i> <span>Demo</span>
-                </div>
-              </a>
-            </div>
-          {% endif %}
-          {% if project.github %}
-            <div class="card-badges">
-              <a href="{{project.github}}" target="_blank">
-                <div class="badge badge-pill border "> 
-                  <i class="fab fa-github"></i> <span>Github</span>
-                </div>
-              </a>
-            </div>
-          {% endif %}
-          {% if project.video %}
-            <div class="card-badges">
-              <a href="{{project.video}}" target="_blank">
-                <div class="badge badge-pill border "> 
-                  <i class="fa fa-video-camera"></i> <span>Video</span>
-                </div>
-              </a>
-            </div>
-          {% endif %}
-          {% if project.website %}
-            <div class="card-badges">
-              <a href="{{project.video}}" target="_blank">
-                <div class="badge badge-pill border "> 
-                  <i class="fa fa-eye"></i> <span>Website</span>
-                </div>
-              </a>
-            </div>
-          {% endif %}
+          {% for badge in site.data.project_badges %}
+            {% if project[badge.name] %}
+              <div class="card-badges">
+                <a href="{{project[badge.name]}}" target="_blank">
+                  <div class="badge badge-pill border "> 
+                    <i class="{{badge.icon}}"></i> <span>{{badge.displayname}}</span>
+                  </div>
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>  
       <div class="modal fade" id="{{project.key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -65,6 +39,19 @@ permalink: /projects/
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
+            </div>
+            <div class="modal-badges-wrap">
+              {% for badge in site.data.project_badges %}
+                {% if project[badge.name] %}
+                  <div class="card-badges">
+                    <a href="{{project[badge.name]}}" target="_blank">
+                      <div class="badge badge-pill border "> 
+                        <i class="{{badge.icon}}"></i> <span>{{badge.displayname}}</span>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
             </div>
             <div class="modal-body project-content">
               {{project.content}}

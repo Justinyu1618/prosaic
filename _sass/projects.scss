@@ -34,38 +34,7 @@
         max-height: 200px;
         max-width: 100%
       }
-      .card-badges-wrap{
-        display: flex;
-        justify-content: flex-end;
-        padding: 0px 15px;
-        flex-wrap: wrap;
 
-        .card-badges {
-          margin: 5px 5px 15px 0px;
-          
-
-          .badge {
-            display: flex ;
-            border: 1px solid $grey !important;
-            color: $grey;
-            
-            i {
-              font-size: 1.5em;
-              margin-right: 5px;
-            }
-            span {
-              vertical-align: middle;
-              line-height: 18px
-            }
-
-            &:hover {
-              color: black;
-              border-color: black !important;
-              border: 1.5px solid !important;
-            }
-          }
-        }
-      }
     }
   }
 
@@ -79,6 +48,51 @@
     padding: 20px;
     h1, h2, h3, h4, h5 {
       // font-size: 100%;
+    }
+  }
+
+  .card-badges {
+    margin: 5px 5px 15px 0px;
+    
+
+    .badge {
+      display: flex ;
+      border: 1px solid $grey !important;
+      color: $grey;
+      
+      i {
+        font-size: 1.5em;
+        margin-right: 5px;
+      }
+      span {
+        vertical-align: middle;
+        line-height: 18px
+      }
+
+      &:hover {
+        color: black;
+        border-color: black !important;
+        border: 1.5px solid !important;
+      }
+    }
+  }
+
+  .card-badges-wrap{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 15px;
+    flex-wrap: wrap;
+  }
+
+  .modal-badges-wrap{
+    display: flex;
+    justify-content: center;
+    padding: 0px 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    a {
+      text-decoration: none;
     }
   }
 }
